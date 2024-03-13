@@ -1,0 +1,42 @@
+{
+  "type": "record",
+  "namespace": "com.OntarioTechU.SOFE4630U",
+  "name": "SmartMeterReading",
+  "doc": "schema For the records of Smart Meter",
+  "fields": [
+    {
+      "name": "ID",
+      "type": "long",
+      "doc": "Primary key"
+    },
+    {
+      "name": "profile_name",
+      "type": "string",
+      "doc": "Smart meter type"
+    },
+    {
+      "name": "temperature",
+      "type": ["null","double"],
+      "doc": "temperature in celsius"
+    },
+    {
+      "name": "humidity",
+      "type": ["null","double"],
+      "doc": "humidity (percentage)"
+    },
+    {
+      "name": "pressure",
+      "type": ["null","double"],
+      "doc": "pressure in k Pa"
+    },
+    {
+      "name": "modified",
+      "type": {
+		"connect.name": "org.apache.kafka.connect.data.Timestamp",
+		"connect.version":1,
+		"type": "long"
+	  },
+      "doc": "Time stamp"
+    }
+  ]
+}

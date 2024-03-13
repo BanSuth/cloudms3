@@ -1,0 +1,48 @@
+{
+  "connect.name": "Readings",
+  "fields": [
+    {
+      "name": "ID",
+      "type": "long"
+    },
+    {
+      "name": "profile_name",
+      "type": "string"
+    },
+    {
+      "default": null,
+      "name": "temperature",
+      "type": [
+        "null",
+        "double"
+      ]
+    },
+    {
+      "default": null,
+      "name": "humidity",
+      "type": [
+        "null",
+        "double"
+      ]
+    },
+    {
+      "default": null,
+      "name": "pressure",
+      "type": [
+        "null",
+        "double"
+      ]
+    },
+    {
+      "name": "modified",
+      "type": {
+        "connect.name": "org.apache.kafka.connect.data.Timestamp",
+        "connect.version": 1,
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    }
+  ],
+  "name": "Readings",
+  "type": "record"
+}
